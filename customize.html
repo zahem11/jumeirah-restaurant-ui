@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#16241B">
+  <title>تخصيص الطلب — ساندوتش جُميرا ميكس | JUMEIRÀH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/screens.css">
+</head>
+<body data-page="customize">
+
+  <header class="mini-head">
+    <div class="container narrow mini-head-inner">
+      <a class="back-link" href="index.html" aria-label="الرجوع للقائمة">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        رجوع للقائمة
+      </a>
+      <div class="mini-brand">
+        <span class="b1">JUMEIRÀH</span>
+        <span class="b2">تخصيص الطلب</span>
+      </div>
+      <div class="steps" aria-hidden="true">
+        <span class="dot on"></span> خطوة 1: التخصيص
+        <span class="dot"></span> خطوة 2: التأكيد
+      </div>
+    </div>
+  </header>
+
+  <main class="container narrow" style="padding: 1.6rem 0 3rem;">
+
+    <!-- ═══ بطاقة تخصيص الصنف (البوب-أب) ═══ -->
+    <section class="card" aria-label="تخصيص الصنف">
+
+      <div class="item-hero">
+        <div class="item-hero-media" data-emoji="🌯">
+          <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=500&q=70"
+               alt="ساندوتش جُميرا ميكس" onerror="this.remove()">
+        </div>
+        <div class="item-hero-info">
+          <h1>ساندوتش جُميرا ميكس</h1>
+          <p>شاورما مشكلة (فراخ + غنم) بصوص التومية وبطاطس مقرمشة — خصّصه على كيفك من هنا.</p>
+          <span class="base-price">يبدأ من 160 ج.م</span>
+        </div>
+      </div>
+
+      <!-- نوع العيش: راديو -->
+      <div class="opt-group">
+        <h3 class="opt-title">نوع العيش <span class="req">*</span> <span class="opt-type">(اختيار واحد — إجباري)</span></h3>
+        <div class="opt-list" role="radiogroup" aria-label="نوع العيش">
+          <label class="opt-card" data-type="radio">
+            <input type="radio" name="bread" value="souri" data-price="160" checked>
+            <span class="opt-check" aria-hidden="true"></span>
+            <span class="opt-name">عيش سوري<small>خفيف ومحمّص على الصاج</small></span>
+            <span class="opt-price">160 ج.م</span>
+          </label>
+          <label class="opt-card" data-type="radio">
+            <input type="radio" name="bread" value="baguette" data-price="170">
+            <span class="opt-check" aria-hidden="true"></span>
+            <span class="opt-name">عيش باجيت<small>فرنسي مقرمش من برّه، طري من جوّه</small></span>
+            <span class="opt-price">+10 → 170 ج.م</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- الإضافات: تشيك بوكس -->
+      <div class="opt-group">
+        <h3 class="opt-title">إضافات <span class="opt-type">(اختياري — ممكن تضيف أكتر من واحدة)</span></h3>
+        <div class="opt-list">
+          <label class="opt-card" data-type="checkbox">
+            <input type="checkbox" name="extra" value="toum" data-price="20">
+            <span class="opt-check" aria-hidden="true"></span>
+            <span class="opt-name">إضافة تومية<small>صوص تومية بيضاء زيادة على جنب</small></span>
+            <span class="opt-price">+20 ج.م</span>
+          </label>
+          <label class="opt-card" data-type="checkbox">
+            <input type="checkbox" name="extra" value="fries" data-price="50">
+            <span class="opt-check" aria-hidden="true"></span>
+            <span class="opt-name">باكت بطاطس<small>بطاطس مقرمشة بالملح والباربكيو</small></span>
+            <span class="opt-price">+50 ج.م</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- الكمية + الإجمالي الحي -->
+      <div class="qty-total-row">
+        <div>
+          <span class="lbl" style="display:block; margin-bottom:.45rem;">الكمية</span>
+          <div class="qty-stepper" aria-label="الكمية">
+            <button type="button" id="qtyPlus" aria-label="زيادة الكمية">+</button>
+            <span class="qty" id="qtyVal">1</span>
+            <button type="button" id="qtyMinus" aria-label="تقليل الكمية">−</button>
+          </div>
+        </div>
+        <div class="live-total">
+          <span class="t">الإجمالي الحالي</span>
+          <div class="v"><span id="liveTotal">160</span> <small>ج.م</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ ملخص الدفع السريع ═══ -->
+    <section class="card form-light" aria-label="بيانات الدفع والتوصيل">
+      <h2 class="card-title"><span class="t-ico" aria-hidden="true">🛵</span> بيانات التوصيل</h2>
+      <p class="card-sub">املا البيانات وهنبعت الأوردر للمطعم فوراً — والتوصيل مجاني النهاردة (عرض الثلاثاء 🎉)</p>
+
+      <div class="field">
+        <label for="custName">اسم العميل</label>
+        <div class="control">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <input type="text" id="custName" placeholder="مثال: محمود الشريف" autocomplete="name">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="custPhone">رقم الموبايل</label>
+        <div class="control">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+          <input type="tel" id="custPhone" placeholder="01xxxxxxxxx" inputmode="numeric" autocomplete="tel" dir="ltr" style="text-align:end;">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="custAddr">العنوان بالتفصيل</label>
+        <div class="control">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <input type="text" id="custAddr" value="مدينة الجمالية" autocomplete="street-address">
+        </div>
+      </div>
+
+      <div class="summary-rows" style="margin-top:1.3rem;">
+        <div class="srow"><span>ساندوتش جُميرا ميكس × <span id="sumQty">1</span></span><span id="sumItems">160 ج.م</span></div>
+        <div class="srow"><span>التوصيل</span><span class="free-tag">مجاني — عرض الثلاثاء 🎉</span></div>
+        <div class="srow grand"><span>الإجمالي</span><span id="sumGrand">160 ج.م</span></div>
+      </div>
+
+      <button class="btn btn-gold btn-block" id="confirmOrder" type="button">
+        <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+        تأكيد وإرسال الأوردر للمطعم
+      </button>
+      <p style="margin:.7rem 0 0; text-align:center; font-size:.76rem; color:var(--muted);">
+        بالضغط على التأكيد أنت موافق على شروط الطلب وسياسة الاسترجاع
+      </p>
+    </section>
+  </main>
+
+  <!-- ═══ شاشة النجاح ═══ -->
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-card" role="dialog" aria-label="تم إرسال الطلب">
+      <div class="success-ico" aria-hidden="true">✓</div>
+      <h2>الأوردر راح للمطبخ! 👨‍🍳</h2>
+      <p class="s-msg">استلمنا طلبك وهنكلمك على <span id="sPhone" dir="ltr"></span> للتأكيد خلال دقايق.</p>
+      <div class="success-code" id="orderCode">JUM-0000</div>
+      <div class="success-details" id="successDetails"></div>
+      <a class="btn btn-gold btn-block" href="index.html">الرجوع للقائمة الرئيسية</a>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/screens.js"></script>
+</body>
+</html>

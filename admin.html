@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#3E2723">
+  <title>لوحة تحكم المالك | JUMEIRÀH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/screens.css">
+</head>
+<body data-page="admin">
+
+  <header class="mini-head">
+    <div class="container wide mini-head-inner">
+      <a class="back-link" href="index.html" aria-label="الرجوع للموقع">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        الموقع
+      </a>
+      <div class="mini-brand">
+        <span class="b1">JUMEIRÀH <span style="font-family:var(--f-ar); font-size:.7rem; letter-spacing:0;">— لوحة تحكم المالك</span></span>
+        <span class="b2 admin-head-date" id="adminDate"></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container wide" style="padding: 1.5rem 0 3rem;">
+
+    <!-- ═══ كروت الإحصائيات ═══ -->
+    <section class="stats-grid" aria-label="إحصائيات اليوم">
+      <div class="stat-card">
+        <div class="stat-top">
+          <span class="stat-ico" aria-hidden="true">🧾</span>
+          <span class="stat-label">أوردرات اليوم</span>
+        </div>
+        <div class="stat-num"><span data-count="47">0</span> <small>طلب</small></div>
+        <span class="stat-delta">▲ 12% عن أمس</span>
+      </div>
+      <div class="stat-card st-olive">
+        <div class="stat-top">
+          <span class="stat-ico" aria-hidden="true">💰</span>
+          <span class="stat-label">إجمالي مبيعات الموقع</span>
+        </div>
+        <div class="stat-num"><span data-count="18540">0</span> <small>ج.م</small></div>
+        <span class="stat-delta">▲ 8% عن أمس</span>
+      </div>
+      <div class="stat-card st-espresso">
+        <div class="stat-top">
+          <span class="stat-ico" aria-hidden="true">🍽️</span>
+          <span class="stat-label">حجوزات الطاولات اليوم</span>
+        </div>
+        <div class="stat-num"><span data-count="12">0</span> <small>حجز</small></div>
+        <span class="stat-delta">3 منهم مناسبات</span>
+      </div>
+    </section>
+
+    <!-- ═══ الأوردرات المباشرة ═══ -->
+    <section aria-label="الأوردرات المباشرة" style="margin-bottom:2rem;">
+      <div style="display:flex; align-items:center; justify-content:space-between; gap:.8rem; flex-wrap:wrap; margin-bottom:1rem;">
+        <h2 class="card-title" style="margin:0;">
+          <span class="t-ico" aria-hidden="true">🔴</span> الأوردرات المباشرة
+          <span class="live-dot" aria-hidden="true"></span>
+        </h2>
+        <button class="btn btn-outline btn-sm" id="simOrder" type="button">➕ محاكاة طلب جديد</button>
+      </div>
+
+      <div class="chips-row" id="orderFilters" style="margin-bottom:.6rem;">
+        <button class="g-chip is-active" data-filter="all" type="button">الكل</button>
+        <button class="g-chip" data-filter="0" type="button">طلبات جديدة</button>
+        <button class="g-chip" data-filter="1" type="button">جاري التحضير</button>
+        <button class="g-chip" data-filter="2" type="button">تم التسليم</button>
+      </div>
+
+      <div id="ordersList"><!-- كروت الأوردرات --></div>
+    </section>
+
+    <!-- ═══ التحكم السريع في المنيو ═══ -->
+    <section aria-label="التحكم في المنيو">
+      <h2 class="card-title"><span class="t-ico" aria-hidden="true">🎛️</span> التحكم السريع في المنيو</h2>
+      <p class="card-sub">اقفل الصنف لو خلص من الفرن — هيختفي فوراً من الموقع. وعدّل السعر من غير ما تفتح الكاشير.</p>
+
+      <div id="menuCtrl"><!-- صفوف التحكم --></div>
+
+      <p style="text-align:center; font-size:.78rem; color:var(--muted); margin-top:.6rem;">
+        ✦ التعديلات بتتحفظ تلقائياً وتظهر على الموقع فوراً
+      </p>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/screens.js"></script>
+</body>
+</html>

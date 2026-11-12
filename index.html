@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1E2F23">
+  <title>مطعم وكافيه جُميرا | JUMEIRÀH Restaurant &amp; Cafe</title>
+  <meta name="description" content="جُميرا راعي اللمة الحلوة — صواني فخمة، مشاوي، بيتزا، شاورما وبرجر. توصيل، استلام من الفرع، وحجز طاولات.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ═══════════ شريط العرض الترويجي ═══════════ -->
+  <div class="promo-banner" id="promoBanner" role="region" aria-label="عرض ترويجي">
+    <span class="promo-icon" aria-hidden="true">🛵</span>
+    <p class="promo-text">عرض الثلاثـاء: <strong>توصيل مجاني</strong> على جميع الطلبات!</p>
+    <span class="promo-icon" aria-hidden="true">✨</span>
+    <span class="promo-shine" aria-hidden="true"></span>
+  </div>
+
+  <!-- ═══════════ الهيدر ═══════════ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+
+      <a href="#" class="brand" aria-label="مطعم وكافيه جُميرا — الصفحة الرئيسية">
+        <span class="brand-monogram" aria-hidden="true">
+          <svg viewBox="0 0 48 48" width="46" height="46" fill="none">
+            <path d="M24 2 46 24 24 46 2 24Z" stroke="#D4AF37" stroke-width="1.6"/>
+            <path d="M24 8 40 24 24 40 8 24Z" stroke="#D4AF37" stroke-width=".8" opacity=".5"/>
+            <text x="24" y="30" text-anchor="middle" font-family="Cormorant Garamond, Georgia, serif" font-size="19" font-weight="700" fill="#D4AF37">J</text>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-logo">JUMEIRÀH</span>
+          <span class="brand-slogan">جُميرا راعي اللمة الحلوة</span>
+        </span>
+      </a>
+
+      <nav class="header-actions" aria-label="أدوات سريعة">
+        <a class="icon-btn" href="tel:16JUM" aria-label="اتصل بنا" title="اتصل بنا">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+        <button class="icon-btn cart-toggle" id="cartToggle" aria-label="فتح سلة الطلبات" title="سلة الطلبات">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-badge" id="cartBadge" hidden>0</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ═══════════ الهيرو + أزرار الخدمة ═══════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-pattern" aria-hidden="true"></div>
+    <div class="container hero-inner">
+
+      <div class="hero-copy">
+        <p class="hero-kicker">مطعم وكافيه <span class="en">JUMEIRÀH</span></p>
+        <h1 class="hero-title">راعي اللمة الحلوة</h1>
+        <p class="hero-sub">
+          صواني فخمة على ذوق الملوك، مشاوي وبيتزا وشاورما وبرجر…
+          قائمة متكاملة تحوّل أي لمّة لمناسبة تُحكى.
+        </p>
+        <div class="hero-ornament" aria-hidden="true">
+          <span class="line"></span><span class="diamond">✦</span><span class="line"></span>
+        </div>
+      </div>
+
+      <!-- أزرار الخدمة الرئيسية -->
+      <div class="service-panel" role="tablist" aria-label="طريقة الطلب">
+        <div class="service-tabs">
+          <button class="service-tab is-active" id="tab-delivery" role="tab" aria-selected="true" aria-controls="panel-delivery" data-panel="delivery">
+            <span class="tab-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M9 17h6l-1.5-6H8"/><path d="M16 8h4l2 4.5"/><path d="M12 3v3M9.5 4.5 12 6l2.5-1.5"/></svg>
+            </span>
+            <span class="tab-label">توصيل دليفري</span>
+            <span class="tab-hint">متوسط الوقت 45 دقيقة</span>
+          </button>
+
+          <button class="service-tab" id="tab-pickup" role="tab" aria-selected="false" aria-controls="panel-pickup" data-panel="pickup">
+            <span class="tab-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V9"/><path d="M9 21v-7h6v7"/><path d="M3 9h18"/></svg>
+            </span>
+            <span class="tab-label">استلام من الفرع</span>
+            <span class="tab-hint">جاهز خلال 20 دقيقة</span>
+          </button>
+
+          <button class="service-tab" id="tab-reservation" role="tab" aria-selected="false" aria-controls="panel-reservation" data-panel="reservation">
+            <span class="tab-ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M9 15l2 2 4-4"/></svg>
+            </span>
+            <span class="tab-label">حجز طاولة / مناسبة</span>
+            <span class="tab-hint">أعياد ميلاد ومناسبات</span>
+          </button>
+        </div>
+
+        <!-- لوحة: توصيل -->
+        <div class="service-body" id="panel-delivery" role="tabpanel" aria-labelledby="tab-delivery">
+          <div class="service-form">
+            <div class="field field-grow">
+              <label for="deliveryAddress">عنوان التوصيل</label>
+              <div class="control">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <input type="text" id="deliveryAddress" placeholder="اكتب عنوانك بالتفصيل…">
+              </div>
+            </div>
+            <button class="btn btn-gold" type="button">
+              ابدأ الطلب
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </button>
+          </div>
+          <p class="service-note">🛵 التوصيل مجاني يوم الثلاثاء على جميع الطلبات — بدون حد أدنى.</p>
+        </div>
+
+        <!-- لوحة: استلام -->
+        <div class="service-body" id="panel-pickup" role="tabpanel" aria-labelledby="tab-pickup" hidden>
+          <div class="service-form">
+            <div class="field field-grow">
+              <label for="pickupBranch">اختر الفرع</label>
+              <div class="control">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <select id="pickupBranch">
+                  <option>فرع التجمع الخامس — ٩٠ شمال</option>
+                  <option>فرع الشيخ زايد — أركان بلازا</option>
+                  <option>فرع المعادي — شارع ٩</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn btn-gold" type="button">
+              استلم من الفرع
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </button>
+          </div>
+          <p class="service-note">🏬 جهّز طلبك خلال ٢٠ دقيقة وهنلاقيك على الباب — مع خصم ٥٪ على الدفع كاش.</p>
+        </div>
+
+        <!-- لوحة: حجز -->
+        <div class="service-body" id="panel-reservation" role="tabpanel" aria-labelledby="tab-reservation" hidden>
+          <div class="service-form service-form-grid">
+            <div class="field">
+              <label for="resDate">التاريخ</label>
+              <div class="control"><input type="date" id="resDate"></div>
+            </div>
+            <div class="field">
+              <label for="resTime">الوقت</label>
+              <div class="control">
+                <select id="resTime">
+                  <option>1:00 م</option><option>2:00 م</option><option>4:00 م</option>
+                  <option selected>6:00 م</option><option>8:00 م</option><option>10:00 م</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="resGuests">عدد الأشخاص</label>
+              <div class="control">
+                <select id="resGuests">
+                  <option>شخصان</option><option selected>4 أشخاص</option><option>6 أشخاص</option>
+                  <option>8 أشخاص</option><option>أكثر من 10 — مناسبة</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="resOccasion">المناسبة</label>
+              <div class="control">
+                <select id="resOccasion">
+                  <option selected>جلسة عادية</option><option>عيد ميلاد 🎂</option>
+                  <option>خطوبة 💍</option><option>اجتماع عمل 💼</option>
+                </select>
+              </div>
+            </div>
+            <button class="btn btn-gold btn-reserve" type="button">
+              احجز طاولتك
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            </button>
+          </div>
+          <p class="service-note">🎉 حجوزات المناسبات تشمل تزيين الطاولة وكيكة مجاناً — أخبرنا قبلها بـ 24 ساعة.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════ شريط التصنيفات ═══════════ -->
+  <nav class="categories-wrap" id="categories" aria-label="تصنيفات القائمة">
+    <div class="container">
+      <div class="categories" id="categoriesTrack"><!-- يُبنى بالجافاسكريبت --></div>
+    </div>
+  </nav>
+
+  <!-- ═══════════ القائمة ═══════════ -->
+  <main class="menu" id="menu">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="section-title"><span class="en">—</span> قائمتنا <span class="en">—</span></h2>
+        <p class="section-sub">اختر من قائمة جُميرا المختارة بعناية… كل طبق له حكاية</p>
+        <div class="hero-ornament" aria-hidden="true">
+          <span class="line"></span><span class="diamond">✦</span><span class="line"></span>
+        </div>
+      </div>
+
+      <div class="menu-grid" id="menuGrid"><!-- تُبنى الكروت بالجافاسكريبت --></div>
+
+      <p class="menu-empty" id="menuEmpty" hidden>لا توجد أصناف في هذا التصنيف حالياً 🍽️</p>
+    </div>
+  </main>
+
+  <!-- ═══════════ الفوتر ═══════════ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <p class="brand-logo">JUMEIRÀH</p>
+        <p class="footer-slogan">جُميرا راعي اللمة الحلوة</p>
+        <p class="footer-about">
+          مطعم وكافيه مصري بروح فاخرة… صواني للمناسبات، مشاوي على الذوق،
+          وأجواء تليق بأحلى لمّة مع أصحابك وعيلتك.
+        </p>
+      </div>
+      <div class="footer-col">
+        <h3>روابط سريعة</h3>
+        <ul>
+          <li><a href="#menu">القائمة</a></li>
+          <li><a href="reservation.html">حجز طاولة / مناسبة</a></li>
+          <li><a href="#categories">العروض</a></li>
+          <li><a href="#">فروعنا</a></li>
+          <li><a href="admin.html">لوحة تحكم المالك</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>تواصل معنا</h3>
+        <ul class="footer-contact">
+          <li><span aria-hidden="true">📞</span> <a href="tel:16JUM" dir="ltr">16 JUM</a></li>
+          <li><span aria-hidden="true">💬</span> <a href="#">واتساب الطلبات</a></li>
+          <li><span aria-hidden="true">📍</span> التجمع الخامس • الشيخ زايد • المعادي</li>
+          <li><span aria-hidden="true">🕘</span> يومياً من 10 صباحاً حتى 2 بعد منتصف الليل</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <div class="container footer-bar-inner">
+        <p>© 2026 مطعم وكافيه جُميرا — جميع الحقوق محفوظة</p>
+        <p class="footer-tagline">صُنع بحب وكثير من الكاراميل ✦</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════ شريط السلة السفلي (موبايل) ═══════════ -->
+  <div class="cart-bar" id="cartBar" hidden>
+    <button class="cart-bar-btn" id="cartBarBtn">
+      <span class="cart-bar-count" id="cartBarCount">0 صنف</span>
+      <span class="cart-bar-total" id="cartBarTotal">0 ج.م</span>
+      <span class="cart-bar-cta">عرض السلة ←</span>
+    </button>
+  </div>
+
+  <!-- ═══════════ درج السلة ═══════════ -->
+  <div class="drawer-overlay" id="drawerOverlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="سلة الطلبات" aria-hidden="true">
+    <header class="drawer-head">
+      <h3>سلة الطلبات <span class="drawer-mode" id="drawerMode">🛵 توصيل</span></h3>
+      <button class="icon-btn" id="cartClose" aria-label="إغلاق السلة">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+    </header>
+
+    <div class="drawer-items" id="drawerItems"><!-- عناصر السلة --></div>
+
+    <footer class="drawer-foot" id="drawerFoot">
+      <div class="drawer-row"><span>المجموع الفرعي</span><span id="sumSubtotal">0 ج.م</span></div>
+      <div class="drawer-row">
+        <span>التوصيل</span>
+        <span class="free-tag">مجاني — عرض الثلاثاء 🎉</span>
+      </div>
+      <div class="drawer-row drawer-total"><span>الإجمالي</span><span id="sumTotal">0 ج.م</span></div>
+      <button class="btn btn-gold btn-block" id="checkoutBtn">إتمام الطلب</button>
+      <p class="drawer-note">الأسعار تشمل ضريبة القيمة المضافة</p>
+    </footer>
+  </aside>
+
+  <!-- ═══════════ التوست ═══════════ -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

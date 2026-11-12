@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1E2F23">
+  <title>حجز طاولة | مطعم وكافيه جُميرا JUMEIRÀH</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/screens.css">
+</head>
+<body data-page="reservation">
+
+  <header class="mini-head">
+    <div class="container narrow mini-head-inner">
+      <a class="back-link" href="index.html" aria-label="الرجوع للرئيسية">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        رجوع
+      </a>
+      <div class="mini-brand">
+        <span class="b1">JUMEIRÀH</span>
+        <span class="b2">حجز طاولة / مناسبة</span>
+      </div>
+      <div class="steps" aria-hidden="true">
+        <span class="dot on"></span> التفاصيل
+        <span class="dot on"></span> الإضافات
+        <span class="dot"></span> التأكيد
+      </div>
+    </div>
+  </header>
+
+  <main class="container narrow" style="padding: 1.6rem 0 3rem;">
+
+    <!-- ═══ تفاصيل الحجز ═══ -->
+    <section class="card form-light" aria-label="تفاصيل الحجز">
+      <h2 class="card-title"><span class="t-ico" aria-hidden="true">🍽️</span> تفاصيل الحجز</h2>
+      <p class="card-sub">احجز طاولتك في دقيقة — والاطلاع على الأجواء قبل ما تجي</p>
+
+      <!-- عدد الأفراد -->
+      <div class="field">
+        <label>عدد الأفراد <span style="color:#C0392B;">*</span></label>
+        <div class="chips-row" id="guestChips" role="group" aria-label="عدد الأفراد"><!-- 2 إلى 15 --></div>
+      </div>
+
+      <!-- التاريخ والوقت -->
+      <div class="field">
+        <label for="resDate">التاريخ</label>
+        <div class="control">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          <input type="date" id="resDate">
+        </div>
+      </div>
+
+      <div class="field">
+        <label>الوقت</label>
+        <div class="chips-row" id="timeChips" role="group" aria-label="وقت الحجز">
+          <button class="g-chip" type="button" data-time="12:30 م">12:30 م</button>
+          <button class="g-chip" type="button" data-time="2:00 م">2:00 م</button>
+          <button class="g-chip" type="button" data-time="4:30 م">4:30 م</button>
+          <button class="g-chip is-active" type="button" data-time="6:00 م">6:00 م</button>
+          <button class="g-chip" type="button" data-time="8:00 م">8:00 م</button>
+          <button class="g-chip" type="button" data-time="9:30 م">9:30 م</button>
+          <button class="g-chip" type="button" data-time="10:00 م">10:00 م</button>
+        </div>
+      </div>
+
+      <!-- نوع المناسبة -->
+      <div class="field">
+        <label>نوع المناسبة</label>
+        <div class="occasion-grid" role="radiogroup" aria-label="نوع المناسبة">
+          <label class="occ-card">
+            <input type="radio" name="occasion" value="normal" checked>
+            <span class="occ-ico" aria-hidden="true">☕</span>
+            <span class="occ-name">قعدة عادية</span>
+            <span class="occ-desc">جلسة هادية على القهوة والفطار</span>
+          </label>
+          <label class="occ-card">
+            <input type="radio" name="occasion" value="family">
+            <span class="occ-ico" aria-hidden="true">👨‍👩‍👧‍👦</span>
+            <span class="occ-name">عزومة عائلية</span>
+            <span class="occ-desc">صواني كبيرة وربط الطاولات مع بعض</span>
+          </label>
+          <label class="occ-card">
+            <input type="radio" name="occasion" value="party">
+            <span class="occ-ico" aria-hidden="true">🎂</span>
+            <span class="occ-name">عيد ميلاد / مناسبة خاصة</span>
+            <span class="occ-tag">تجهيز ديكور 🎈</span>
+            <span class="occ-desc">بنجهز البالونات والديكور ببلاش</span>
+          </label>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ الأب-سيل: تجهيز الأكل قبل الوصول ═══ -->
+    <section class="card" aria-label="تجهيز الأكل قبل الوصول">
+      <h2 class="card-title"><span class="t-ico" aria-hidden="true">🎯</span> هل ترغب في تجهيز الأكل قبل وصولك؟</h2>
+      <div class="upsell-banner">
+        <span style="font-size:1.3rem;" aria-hidden="true">⏱️</span>
+        <span>وصلت، قعدت، لقيت الأكل على الطاولة جاهز — من غير انتظار ولا زحمة، وهتوفر 25 دقيقة انتظار.</span>
+      </div>
+
+      <div class="upsell-card" data-upsell="balloon" data-price="1699">
+        <div class="upsell-media" data-emoji="🎈">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=400&q=70"
+               alt="صينية البالون دور" loading="lazy" onerror="this.remove()">
+        </div>
+        <div class="upsell-info">
+          <h4>صينية البالون دور</h4>
+          <p>مشاوي مشكلة دائرية فخمة تكفي 6-8 أشخاص — نجيبها بالبالونات على الطاولة</p>
+          <span class="u-price">1699 ج.م</span>
+        </div>
+        <button class="upsell-add" type="button">أضفها للطاولة</button>
+      </div>
+
+      <div class="upsell-card" data-upsell="torta" data-price="920">
+        <div class="upsell-media" data-emoji="🎂">
+          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=70"
+               alt="تورتة شاورما" loading="lazy" onerror="this.remove()">
+        </div>
+        <div class="upsell-info">
+          <h4>تورتة شاورما</h4>
+          <p>طبقات شاورما فراخ وغنم بالجبنة والصوصات — شكل تورتة وطعم أسطوري</p>
+          <span class="u-price">920 ج.م</span>
+        </div>
+        <button class="upsell-add" type="button">أضفها للطاولة</button>
+      </div>
+    </section>
+
+    <!-- ═══ شريط التأكيد ═══ -->
+    <div class="sum-bar">
+      <div class="sb-total">
+        <span class="t">إجمالي تجهيزات الطاولة</span>
+        <div class="v"><span id="resTotal">0</span> <small style="font-size:.8rem; color:rgba(245,239,230,.7);">ج.م</small></div>
+      </div>
+      <button class="btn btn-gold" id="confirmRes" type="button">
+        تأكيد الحجز
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </button>
+    </div>
+    <p style="text-align:center; font-size:.78rem; color:var(--muted); margin:.9rem 0 0;">
+      الحجز نفسه مجاني — بتدفع تجهيزات الأكل بس لو اخترتها • الإلغاء المتاح قبلها بساعة
+    </p>
+  </main>
+
+  <!-- ═══ شاشة النجاح ═══ -->
+  <div class="success-overlay" id="successOverlay">
+    <div class="success-card" role="dialog" aria-label="تم تأكيد الحجز">
+      <div class="success-ico" aria-hidden="true">✓</div>
+      <h2>حجزك اتأكد! 🎉</h2>
+      <p class="s-msg">طاولتك محجوزة باسمك — وهنبعتلك رسالة تأكيد، ولو جهزت أكل هنلاقيه مستنيك.</p>
+      <div class="success-code" id="resCode">TBL-0000</div>
+      <div class="success-details" id="resDetails"></div>
+      <a class="btn btn-gold btn-block" href="index.html">الرجوع للقائمة الرئيسية</a>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/screens.js"></script>
+</body>
+</html>
